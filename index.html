@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title> vertigal - jQuery vertical gallery </title>
+  <style>
+  @import url(http://fonts.googleapis.com/css?family=Fira+Sans:400,700|Fira+Mono);
+  body {
+    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  }
+  pre, code, tt {
+    font-family: "Fira Mono", monospace;
+  }
+  code {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+  }
+  </style>
+</head>
+<body>
+  <h1> vertigal - jQuery vertical gallery </h1>
+  <div id="my-gallery" data-text-div="#gallery-desc" style="height: 500px;">
+    <img src="http://upload.wikimedia.org/wikipedia/commons/b/b5/800x600_Wallpaper_Blue_Sky.png" data-description="Nice grassy green field"/>
+    <img src="http://farm1.staticflickr.com/25/47502313_5597576816_z.jpg?zz=1" data-description="Weird wavy lines"/>
+    <img src="https://c2.staticflickr.com/6/5246/5239869468_b2a254db7e_z.jpg" data-description="Warmly colored circles"/>
+    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/The-best-top-desktop-space-wallpapers-0p-hd-space-wallpaper-planets.jpg/1024px-The-best-top-desktop-space-wallpapers-0p-hd-space-wallpaper-planets.jpg" data-description="Outer space"/>
+  </div>
+  <div id="gallery-desc"></div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="jquery.vertigal.js"></script>
+  <script>
+    $('#my-gallery').vertigal({imgSize:'cover'});
+  </script>
+  <pre><div>&nbsp; &lt;div id="my-gallery" data-text-div="#gallery-desc" style="height: 500px;"&gt;</div><div>&nbsp; &nbsp; &lt;img src="img-1.png" data-description="Nice grassy green field"/&gt;</div><div>&nbsp; &nbsp; &lt;img src="img-2.png" data-description="Weird wavy lines"/&gt;</div><div>&nbsp; &nbsp; &lt;img src="img-3.png" data-description="Warmly colored circles"/&gt;</div><div>&nbsp; &nbsp; &lt;img src="img-4.png" data-description="Outer space"/&gt;</div><div>&nbsp; &lt;/div&gt;</div><div>&nbsp; &lt;div id="gallery-desc"&gt;&lt;/div&gt;</div><div>&nbsp; &lt;script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"&gt;&lt;/script&gt;</div><div>&nbsp; &lt;script src="jquery.vertigal.js"&gt;&lt;/script&gt;</div><div>&nbsp; &lt;script&gt;</div><div>&nbsp; &nbsp; $('#my-gallery').vertigal({imgSize:'cover'});</div><div>&nbsp; &lt;/script&gt;</div>
+</pre>
+</body>
+</html>
