@@ -9,6 +9,7 @@
     opts = opts || {};
     opts.sidebarWidth = opts.sidebarWidth || '60px';
     opts.imgSize = opts.imgSize || 'contain';
+    opts.noWidth = opts.noWidth || false;
 
     $this.css({
       display: 'block',
@@ -19,15 +20,15 @@
 
     $this.addClass('vertigal');
 
-    $thumbnails.css({
+    $thumbnails.addClass('thumbnails').css({
       position: 'absolute',
       top: 0,
       bottom: 0,
       right: 0,
-      width: opts.sidebarWidth,
       'overflow-x': 'hidden',
       'overflow-y': 'scroll',
-      'padding-right': '15px'
+      'padding-right': '15px',
+      'text-align': 'right'
     });
 
     $bigSlide.css({
@@ -48,8 +49,12 @@
       src = 'url("'+src+'")';
       var $thumbnail = $('<img>', {
         src: $img.attr('src'),
-        style: 'cursor: pointer; display: block; width: '+opts.sidebarWidth
+        style: 'cursor: pointer; display: block; float: right; clear: right;'
       });
+
+      if (!opts.noWidth) {
+        $thumbnail.css('width', opts.sidebarWidth);
+      }
 
       $thumbnail.addClass('thumbnail');
 
