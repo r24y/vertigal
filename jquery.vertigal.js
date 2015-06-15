@@ -17,6 +17,8 @@
       'min-height': '100px'
     });
 
+    $this.addClass('vertigal');
+
     $thumbnails.css({
       position: 'absolute',
       top: 0,
@@ -49,11 +51,16 @@
         style: 'cursor: pointer; display: block; width: '+opts.sidebarWidth
       });
 
+      $thumbnail.addClass('thumbnail');
+
       $thumbnails.append($thumbnail);
       $thumbnail.click(function () {
         console.log(src);
         $bigSlide.css('background-image', src);
         $text.text(text);
+        $thumbnails.children().each(function () {
+          $(this).toggleClass('active', $(this).attr('src') === $thumbnail.attr('src'));
+        });
       });
 
       $img.remove();
